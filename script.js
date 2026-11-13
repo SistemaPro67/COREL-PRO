@@ -41,7 +41,7 @@ function say(t,fn){if(mute||!window.speechSynthesis)return fn&&fn();speechSynthe
 const sayItem=it=>say(hablar(it.k)+". "+it.v);
 
 // Jaguar
-function jag(m,txt,voz=true){$("#jag").src="img/"+m+".jpeg";$("#bub").textContent=txt;if(voz)say(txt)}
+function jag(m,txt,voz=true){$("#jag").src="img/"+m+".png";$("#bub").textContent=txt;if(voz)say(txt)}
 
 function show(id){$$(".s").forEach(s=>s.classList.remove("on"));$("#"+id).classList.add("on");scrollTo(0,0)}
 
