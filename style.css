@@ -1,0 +1,70 @@
+:root{--az:#0b2a8f;--am:#ffc928;--vd:#19b04b;--bg:#eaf6ff;--rj:#ff5a5f}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:"Trebuchet MS","Comic Sans MS",sans-serif;background:linear-gradient(#bfe6ff,#eaffdf);color:var(--az);min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--az);color:var(--am)}
+h1{margin:0;font-size:1.4rem}h2{text-align:center;margin:12px 0}
+.ib{font-size:1.6rem;background:var(--am);border:3px solid #fff;border-radius:14px;width:52px;height:52px;margin-left:6px;cursor:pointer}
+main{max-width:760px;margin:0 auto;padding:8px 12px 190px}
+.s{display:none}.s.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.w{background:#fff;border:4px solid var(--az);border-radius:22px;padding:12px 6px;text-align:center;font-size:1rem;font-weight:700;color:var(--az);cursor:pointer;box-shadow:0 6px 0 var(--az);transition:transform .1s}
+.w:active{transform:translateY(4px);box-shadow:0 2px 0 var(--az)}
+.w b{display:block;font-size:2.6rem}.w.lock{filter:grayscale(1);opacity:.55}
+.big{display:block;margin:16px auto;font:inherit;font-size:1.5rem;font-weight:700;padding:14px 28px;border:4px solid #fff;border-radius:50px;background:var(--vd);color:#fff;box-shadow:0 6px 0 #0c7a30;cursor:pointer}
+.big.alt{background:var(--am);color:var(--az);box-shadow:0 6px 0 #c99500;font-size:1.1rem;padding:10px 18px;margin:8px}
+.row{display:flex;justify-content:center;flex-wrap:wrap}
+.card{background:#fff;border:4px solid var(--az);border-radius:22px;padding:14px;margin:10px 0;text-align:center;font-size:1.3rem}
+.keys{display:inline-block;background:var(--az);color:var(--am);padding:8px 16px;border-radius:14px;font-size:1.8rem;font-weight:700;margin:4px}
+.card .an{font-size:2.4rem}
+#opts button{display:block;width:100%;margin:10px 0;padding:14px;font:inherit;font-size:1.25rem;font-weight:700;background:#fff;color:var(--az);border:4px solid var(--az);border-radius:20px;cursor:pointer;box-shadow:0 5px 0 var(--az)}
+#opts button.gone{opacity:.2;pointer-events:none}
+#opts button.no{animation:shake .4s;background:#ffd3d3;border-color:var(--rj)}
+#opts button.si{background:#c9ffd6;border-color:var(--vd)}
+#prog{text-align:center;font-size:1.8rem}
+#stars{text-align:center;font-size:3.5rem}
+#jagbox{position:fixed;left:6px;bottom:6px;display:flex;align-items:flex-end;gap:6px;z-index:5;pointer-events:none}
+#jag{width:120px;height:auto;animation:float 2.6s ease-in-out infinite;transform-origin:50% 100%;filter:drop-shadow(0 4px 4px #0004)}
+#bub{background:#fff;border:3px solid var(--az);border-radius:18px;padding:8px 12px;max-width:230px;font-weight:700;font-size:.95rem;order:2;margin-bottom:60px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+#load{position:fixed;inset:0;z-index:20;background:linear-gradient(#ffc928,#19b04b);text-align:center;padding-top:20vh;color:var(--az)}
+#load.on{display:block}
+#lrun{font-size:5rem;animation:run 1.2s linear infinite}
+@keyframes run{from{transform:translateX(-60vw)}to{transform:translateX(60vw)}}
+#lbar{width:70%;height:26px;margin:18px auto;background:#fff;border:4px solid var(--az);border-radius:20px;overflow:hidden}
+#lbar i{display:block;height:100%;width:0;background:var(--az)}
+#lani{font-size:3rem;animation:bounce .6s infinite alternate}
+@keyframes bounce{to{transform:translateY(-18px)}}
+#modal{display:none;position:fixed;inset:0;background:#000a;z-index:30;padding:12px;overflow:auto}
+#modal.on{display:block}
+.box{background:#fff;border-radius:22px;max-width:640px;margin:0 auto;padding:14px;position:relative}
+.x{position:absolute;right:8px;top:8px;width:44px;height:44px;font-size:1.2rem}
+#manual h3{background:var(--az);color:var(--am);padding:6px 10px;border-radius:12px}
+#manual button{display:flex;justify-content:space-between;width:100%;font:inherit;font-size:1.05rem;padding:8px;margin:4px 0;border:2px solid var(--az);border-radius:12px;background:#fff;color:var(--az);cursor:pointer}
+button:focus-visible{outline:4px solid var(--rj)}
+@media(max-width:480px){#jag{width:90px}#bub{font-size:.85rem;max-width:170px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+.fc{font:inherit;font-size:1.05rem;font-weight:700;min-height:90px;background:#fff;color:var(--az);border:4px solid var(--az);border-radius:18px;cursor:pointer;box-shadow:0 5px 0 var(--az)}
+.fc.up{background:var(--am)}.fc.si{background:#c9ffd6;border-color:var(--vd)}
+.fc.sm{font-size:1.4rem;min-height:110px}.fc.glow{background:var(--am);transform:scale(1.12);box-shadow:0 0 25px var(--am)}
+#board{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin:10px 0}
+.cf{position:fixed;top:-40px;z-index:40;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+.dip{text-align:center;border:8px double var(--am);padding:14px}
+#stars{animation:pop .6s}@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.25)}}
+@media print{header,main,#jagbox,.x,#pr{display:none!important}#modal{position:static;background:none}}
+
+/* Tema oscuro */
+html[data-tema=oscuro]{--az:#9cc2ff;--bg:#0e1630;color-scheme:dark}
+html[data-tema=oscuro] body{background:linear-gradient(#0d1530,#10261f)}
+html[data-tema=oscuro] header{background:#0a1230}
+html[data-tema=oscuro] .w,html[data-tema=oscuro] .card,html[data-tema=oscuro] .fc,html[data-tema=oscuro] #opts button,html[data-tema=oscuro] .box,html[data-tema=oscuro] #manual button,html[data-tema=oscuro] #bub,html[data-tema=oscuro] #lbar{background:#1a2650;color:#e8f0ff}
+html[data-tema=oscuro] .fc.up{background:#7a5c00}
+html[data-tema=oscuro] .fc.si,html[data-tema=oscuro] #opts button.si{background:#14532d}
+html[data-tema=oscuro] #opts button.no{background:#6b1d24}
+html[data-tema=oscuro] .keys{background:#0b2a8f;color:#ffc928}
+html[data-tema=oscuro] #manual h3{background:#0b2a8f}
+html[data-tema=oscuro] .fc.glow{color:#0b2a8f;background:var(--am)}
+html[data-tema=oscuro] #load{background:linear-gradient(#1a2a6c,#0b3d2a);color:#ffc928}
+@media print{.box,.dip{background:#fff!important;color:#0b2a8f!important}}

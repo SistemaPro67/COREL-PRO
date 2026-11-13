@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COREL PRO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🐆 COREL PRO</h1>
+  <div>
+    <button class="ib" id="bTema" aria-label="Tema claro u oscuro">🌙</button>
+    <button class="ib" id="bHome" aria-label="Inicio">🏠</button>
+    <button class="ib" id="bAlb" aria-label="Álbum">🎁</button>
+    <button class="ib" id="bMan" aria-label="Manual">📖</button>
+    <button class="ib" id="bMute" aria-label="Sonido">🔊</button>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="s on"><h2>¡Elige un mundo!</h2><div id="worlds" class="grid"></div></section>
+  <section id="world" class="s"><h2 id="wTitle"></h2><div id="levels" class="grid"></div></section>
+  <section id="study" class="s"><h2>👀 Mira y recuerda</h2><div id="cards"></div><button class="big" id="bReady">¡Listo! ▶</button></section>
+  <section id="quiz" class="s">
+    <div id="prog"></div>
+    <div id="q" class="card"></div>
+    <div id="opts"></div>
+    <div class="row"><button class="big alt" id="bHint">💡 Pista</button><button class="big alt" id="bRead">🔊 Escuchar</button></div>
+  </section>
+  <section id="mini" class="s"><div id="prog2" class="card"></div><div id="board"></div><div class="row"><button class="big alt" id="bRep">🔊 Otra vez</button></div></section>
+  <section id="end" class="s"><h2 id="eTitle"></h2><div id="stars"></div><button class="big" id="bNext">Seguir ▶</button></section>
+</main>
+
+<div id="jagbox"><div id="bub">¡Hola! Soy Ciber Jaguar</div><img id="jag" src="img/ok.jpeg" alt="Ciber Jaguar"></div>
+
+<div id="load" class="s"><div id="lrun">🐆💨</div><h2 id="lmsg"></h2><div id="lbar"><i></i></div><div id="lani"></div></div>
+
+<div id="modal"><div class="box"><button class="ib x" id="bClose">✖</button><h2 id="mTitle">📖 Manual</h2><div id="manual"></div></div></div>
+
+<script>
+function aviso(t){document.body.insertAdjacentHTML("afterbegin",'<p style="background:#ffd3d3;color:#900;padding:12px;font:16px sans-serif;margin:0">⚠️ '+t+'</p>')}
+window.onerror=function(m,s,l){aviso("Error en el juego: "+m+" (línea "+l+")")};
+</script>
+<script src="script.js" onerror="aviso('No se encontró el archivo script.js. Debe estar en la misma carpeta que index.html')"></script>
+</body>
+</html>
